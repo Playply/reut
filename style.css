@@ -69,16 +69,42 @@ body {
     text-align: center;
 }
 
-.body-definition {
-    margin-top: 1rem;
+.body-definition-lead,
+.body-scenarios-lead,
+.body-child-lead,
+.body-school-lead,
+.body-differentiation-lead,
+.body-contact-lead {
+    font-size: clamp(1.125rem, 2vw, 1.5rem);
+    line-height: 1.7;
+    max-width: 800px;
 }
 
-.body-scenarios,
-.body-child,
-.body-school,
-.body-differentiation {
-    margin-top: 1rem;
-    max-width: 700px;
+.body-definition-lead {
+    margin-bottom: 0;
+}
+
+.body-scenarios-lead,
+.body-child-lead,
+.body-school-lead,
+.body-differentiation-lead {
+    margin: 0 auto 1.5rem auto;
+}
+
+.body-contact-lead {
+    margin: 0 auto 2rem auto;
+}
+
+.scenarios-media,
+.differentiation-media {
+    margin-top: 2rem;
+}
+
+.scenarios-media .media-frame,
+.differentiation-media .media-frame {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* ========================================
@@ -160,6 +186,38 @@ body {
 /* ========================================
    IMAGES
    ======================================== */
+
+/* ========================================
+   MEDIA FRAMES (Styled Placeholders)
+   ======================================== */
+
+.media-frame {
+    width: 100%;
+    background-color: #e5e7eb;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.media-frame::before {
+    content: '';
+    display: block;
+    padding-bottom: 66.67%; /* 3:2 aspect ratio */
+}
+
+.media-frame--a {
+    background-color: #d1d5db;
+}
+
+.media-frame--b {
+    background-color: #9ca3af;
+}
+
+.media-frame--definition,
+.media-frame--scenarios,
+.media-frame--differentiation {
+    background-color: #d1d5db;
+}
 
 .hero-image,
 .compare-image,
