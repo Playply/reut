@@ -4,63 +4,45 @@
  */
 
 document.addEventListener('DOMContentLoaded', function() {
-    // CTA button handlers
-    const ctaButtons = document.querySelectorAll('.button-primary');
-    
-    ctaButtons.forEach(function(button) {
-        button.addEventListener('click', function(e) {
-            // Prevent default only for hash links that need handling
-            if (this.getAttribute('href') === '#') {
-                e.preventDefault();
-                handleCTAClick(this);
-            }
-        });
-    });
-    
-    /**
-     * Handle CTA click
-     * In production, this would open a modal or navigate to a contact form
-     */
-    function handleCTAClick(button) {
-        // For now, just log the action
-        console.log('CTA clicked:', button.textContent.trim());
-        
-        // Show loading state
-        const originalText = button.textContent;
-        button.classList.add('loading');
-        button.textContent = 'загрузка...';
-        button.disabled = true;
-        
-        // Simulate async action (in production, this would be a real request)
-        setTimeout(function() {
-            button.classList.remove('loading');
-            button.textContent = originalText;
-            button.disabled = false;
-            
-            // In production: open modal or redirect
-            alert('CTA активирован: обсудить проект / получить презентацию');
-        }, 500);
-    }
-    
-    /**
-     * Smooth scroll for anchor links
-     */
-    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
-        anchor.addEventListener('click', function(e) {
-            const targetId = this.getAttribute('href');
-            if (targetId !== '#' && targetId !== '#contact') {
-                return;
-            }
-            
-            const targetElement = document.querySelector(targetId);
+    // Smooth scroll for hero CTA to #contact
+    const heroCta = document.querySelector('.cta-group-hero a[href="#contact"]');
+    if (heroCta) {
+        heroCta.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetElement = document.querySelector('#contact');
             if (targetElement) {
-                e.preventDefault();
                 targetElement.scrollIntoView({
                     behavior: 'smooth',
                     block: 'start'
                 });
             }
         });
-    });
+    }
+
+    // Final CTA button handler - replace text without reload or alert
+    const ctaFinal = document.getElementById('cta-final');
+    if (ctaFinal) {
+        ctaFinal.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Prevent multiple clicks
+            if (this.classList.contains('loading')) {
+                return;
+            }
+
+            // Show loading state
+            const originalText = this.textContent;
+            this.classList.add('loading');
+            this.textContent = 'загрузка...';
+            this.disabled = true;
+
+            // Simulate async action, then show success message
+            setTimeout(function() {
+                ctaFinal.classList.remove('loading');
+                ctaFinal.textContent = 'Спасибо, мы свяжемся с вами';
+                ctaFinal.disabled = false;
+            }, 800);
+        });
+    }
 });
 

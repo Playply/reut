@@ -109,7 +109,7 @@ body {
     text-decoration: none;
     border: none;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: background-color 0.2s ease;
     border-radius: 4px;
     text-align: center;
 }
@@ -158,28 +158,37 @@ body {
 }
 
 /* ========================================
-   MEDIA PLACEHOLDERS
+   IMAGES
    ======================================== */
 
-.media-placeholder {
-    background-color: #e8eaea;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
+.hero-image,
+.compare-image,
+.definition-image,
+.differentiation-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
 }
 
-.media-placeholder[data-requires-confirmation="true"] {
-    border: 1px dashed #9aa5b1;
+.hero-image {
+    border-radius: 8px;
 }
 
-.media-placeholder-text {
-    color: #6b7784;
-    font-size: 0.875rem;
-    line-height: 1.6;
-    padding: 1.5rem;
+.compare-image {
+    border-radius: 4px;
+}
+
+.definition-image {
+    border-radius: 8px;
+}
+
+.differentiation-image {
+    border-radius: 8px;
+    margin-top: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* ========================================
@@ -208,12 +217,6 @@ body {
     width: 100%;
 }
 
-.media-placeholder-hero {
-    width: 100%;
-    aspect-ratio: 4/3;
-    border-radius: 8px;
-}
-
 /* ========================================
    SCREEN 2: TRANSFORM (COMPARE)
    ======================================== */
@@ -235,12 +238,6 @@ body {
 
 .compare-state {
     width: 100%;
-}
-
-.media-placeholder-compare {
-    width: 100%;
-    aspect-ratio: 16/9;
-    border-radius: 4px;
 }
 
 .compare-divider {
@@ -270,12 +267,6 @@ body {
 
 .definition-media {
     width: 100%;
-}
-
-.media-placeholder-definition {
-    width: 100%;
-    aspect-ratio: 4/3;
-    border-radius: 8px;
 }
 
 /* ========================================
@@ -342,10 +333,6 @@ body {
         order: 4;
     }
 
-    .media-placeholder-hero {
-        aspect-ratio: 16/9;
-    }
-
     /* Compare block mobile */
     .compare-block-desktop {
         display: none;
@@ -395,9 +382,5 @@ button:focus-visible {
 @media print {
     .section {
         page-break-inside: avoid;
-    }
-
-    .media-placeholder {
-        border: 1px solid #ccc;
     }
 }
