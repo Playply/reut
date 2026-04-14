@@ -5,132 +5,132 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Комплекс Реутского 2.0 — двигательно-игровая среда для начальной школы</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <span class="nav-logo">Комплекс Реутского 2.0</span>
+        </div>
+    </nav>
+
     <!-- SCREEN 1: HERO -->
     <section class="section section-hero" id="hero">
+        <div class="hero-background">
+            <img src="source/src/IMG_0490.JPG" alt="Комплекс Реутского 2.0 в интерьере школьной рекреации" class="hero-bg-image">
+            <div class="hero-overlay"></div>
+        </div>
         <div class="container container-hero">
-            <div class="hero-layout">
-                <div class="hero-content">
-                    <h1 class="headline headline-hero">
-                        Пространство, в котором движение становится частью школьной жизни.
-                    </h1>
-                    <p class="body body-hero">
-                        Комплекс Реутского 2.0 — двигательно-игровая среда для начальной школы. Он помогает рекреации работать не как проходу, а как месту движения, переключения и самостоятельной активности внутри дня.
-                    </p>
-                    <div class="cta-group cta-group-hero">
-                        <a href="#contact" class="button button-primary">обсудить проект / получить презентацию</a>
-                    </div>
-                </div>
-                <div class="hero-media">
-                    <img src="source/src/IMG_0490.JPG" alt="Комплекс Реутского 2.0 в интерьере школьной рекреации" class="hero-image">
+            <div class="hero-content fade-in">
+                <h1 class="headline headline-hero">
+                    Пространство, в котором движение становится частью школьной жизни.
+                </h1>
+                <p class="body body-hero">
+                    Комплекс Реутского 2.0 — двигательно-игровая среда для начальной школы. Он помогает рекреации работать не как проходу, а как месту движения, переключения и самостоятельной активности внутри дня.
+                </p>
+                <div class="cta-group cta-group-hero">
+                    <a href="#contact" class="button button-primary">обсудить проект / получить презентацию</a>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- SCREEN 2: SPACE TRANSFORMATION -->
+    
+    <!-- SCREEN 2: SPACE TRANSFORMATION (Before/After Slider) -->
     <section class="section section-transform" id="transform">
         <div class="container container-transform">
-            <div class="transform-header">
+            <div class="transform-header fade-in">
                 <p class="body body-transform-intro">
                     Одно и то же пространство может быть просто проходом. А может стать местом, где появляется движение, игра и свой ритм внутри школьного дня.
                 </p>
             </div>
-            <div class="compare-block compare-block-desktop">
-                <div class="compare-state compare-state-a">
-                    <div class="media-frame media-frame--a"></div>
-                </div>
-                <div class="compare-divider"></div>
-                <div class="compare-state compare-state-b">
-                    <div class="media-frame media-frame--b"></div>
-                </div>
-            </div>
-            <div class="compare-block compare-block-mobile">
-                <div class="compare-state compare-state-a">
-                    <div class="media-frame media-frame--a"></div>
-                </div>
-                <div class="compare-divider compare-divider-mobile"></div>
-                <div class="compare-state compare-state-b">
-                    <div class="media-frame media-frame--b"></div>
+            <div class="compare-wrapper fade-in">
+                <div class="compare-container" id="compareContainer">
+                    <div class="compare-image-layer compare-after">
+                        <img src="source/src/Modul-01+02+03.jpg" alt="После" class="compare-img">
+                        <span class="compare-label compare-label-after">После</span>
+                    </div>
+                    <div class="compare-image-layer compare-before">
+                        <img src="source/src/Modul-01.jpg" alt="До" class="compare-img">
+                        <span class="compare-label compare-label-before">До</span>
+                    </div>
+                    <div class="compare-divider-line" id="compareDivider">
+                        <div class="compare-handle"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
+    
     <!-- SCREEN 3: PRODUCT DEFINITION -->
     <section class="section section-definition" id="definition">
         <div class="container container-definition">
             <div class="definition-layout">
-                <div class="definition-content">
+                <div class="definition-content fade-in">
                     <p class="body body-definition-lead">
                         Комплекс Реутского 2.0 — это не отдельный снаряд и не случайный объект в рекреации. Это двигательно-игровая среда для начальной школы, встроенная в повседневную жизнь пространства.
                     </p>
                 </div>
-                <div class="definition-media">
-                    <div class="media-frame media-frame--definition"></div>
+                <div class="definition-media fade-in">
+                    <img src="source/src/Modul-01+02.jpg" alt="Комплекс Реутского 2.0" class="definition-image">
                 </div>
             </div>
         </div>
     </section>
-
+    
     <!-- SCREEN 4: SCENARIOS -->
     <section class="section section-scenarios" id="scenarios">
         <div class="container container-scenarios">
-            <p class="body body-scenarios-lead">
+            <p class="body body-scenarios-lead fade-in">
                 Один объект — несколько сценариев: движение, игра, смена состояния, общение, самостоятельная активность.
             </p>
-            <div class="scenarios-media">
-                <div class="media-frame media-frame--scenarios"></div>
+            <div class="scenarios-media fade-in">
+                <img src="source/src/К 4.png" alt="Сценарии использования" class="scenarios-image">
             </div>
         </div>
     </section>
-
+    
     <!-- SCREEN 5: CHILD BENEFITS -->
     <section class="section section-child" id="child">
         <div class="container container-child">
-            <p class="body body-child-lead">
+            <p class="body body-child-lead fade-in">
                 Ребенок получает возможность двигаться, переключаться, пробовать, договариваться, исследовать пространство и находить свой ритм внутри школьного дня.
             </p>
         </div>
     </section>
-
+    
     <!-- SCREEN 6: SCHOOL BENEFITS -->
     <section class="section section-school" id="school">
         <div class="container container-school">
-            <p class="body body-school-lead">
+            <p class="body body-school-lead fade-in">
                 Школа получает среду, которая работает не только визуально, но и поведенчески: помогает иначе использовать рекреацию, поддерживает живой ритм дня и делает пространство более отличимым для родителей и команды.
             </p>
         </div>
     </section>
-
+    
     <!-- SCREEN 7: DIFFERENTIATION -->
     <section class="section section-differentiation" id="differentiation">
         <div class="container container-differentiation">
-            <p class="body body-differentiation-lead">
+            <p class="body body-differentiation-lead fade-in">
                 Это не замена спортзалу и не еще один снаряд. Комплекс работает в другой логике: как часть повседневной среды, а не как отдельная активность по расписанию.
             </p>
-            <div class="differentiation-media">
-                <div class="media-frame media-frame--differentiation"></div>
+            <div class="differentiation-media fade-in">
+                <img src="source/src/К 5.png" alt="Отличия комплекса" class="differentiation-image">
             </div>
         </div>
     </section>
-
+    
     <!-- SCREEN 8: FINAL CTA -->
     <section class="section section-contact" id="contact">
         <div class="container container-contact">
-            <p class="body body-contact-lead">
+            <p class="body body-contact-lead fade-in">
                 Покажем, как комплекс может работать именно в вашей школе.
             </p>
-            <div class="cta-group cta-group-contact">
+            <div class="cta-group cta-group-contact fade-in">
                 <a href="#" class="button button-primary" id="cta-final">обсудить проект / получить презентацию</a>
             </div>
         </div>
     </section>
-
+    
     <script src="script.js"></script>
 </body>
 </html>
